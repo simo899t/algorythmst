@@ -1,6 +1,6 @@
-# algorithmst
+# algorythmst
 
-Beautiful pseudocode blocks for Typst, built on [lovelace](https://typst.app/universe/package/lovelace).
+Beautiful pseudocode blocks for Typst, styled after LaTeX's `algorithm` + `algorithmicx` look and built on [lovelace](https://typst.app/universe/package/lovelace).
 
 - LaTeX `algorithmicx`-style layout: clean booktabs-like horizontal rules, no side borders
 - Line numbers (`1:`) and indent guides
@@ -12,7 +12,7 @@ Beautiful pseudocode blocks for Typst, built on [lovelace](https://typst.app/uni
 ## Usage
 
 ```typst
-#import "@local/algorithmst:0.1.0": *
+#import "@preview/algorythmst:0.1.0": *
 
 #pseudo(
   title: [Binary Search],
@@ -39,7 +39,7 @@ Beautiful pseudocode blocks for Typst, built on [lovelace](https://typst.app/uni
 
 
 ```typst
-#import "@local/algorithmst:0.1.0": *
+#import "@preview/algorythmst:0.1.0": *
 
 #pseudo(
   title: "Compute DSI",

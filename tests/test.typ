@@ -1,4 +1,4 @@
-#import "lib.typ": *
+#import "/lib.typ": *
 
 
 #pseudo(
@@ -11,17 +11,23 @@
       + $m <- floor((l + r) / 2)$
       + *while* $l > 0$ *do*
         + #smallcaps[Hanne-Rothe]
+      + *end while*
       + *if* $A[m] = v$ *then*
         + *return* $m$
       + *else if* $A[m] < v$ *then* $l <- m + 1$
       + *else* $r <- m - 1$
+      + *end if*
+    + *end while*
   + *return* $-1$ #comment[not found]
 ]
 
 #pagebreak()
 
 
-#pseudo(title: "Compute DSI")[
+#pseudo(
+  title: "Compute DSI",
+  caption: [Computes the Dataset Sparse Intervention (DSI): the neuron subset $s$ whose intervention along the activation difference $macron(a)$ best moves the model from dataset $D_0$ toward $D_k$, using at most $n$ non-zero entries.]
+  )[
   - *Require:* dataset $D_0$, dataset $D_k$, set size $n$, number of steps $t$
   + $macron(a) <- "mean"_(x in D_k) (a|x) - "mean"_(x in D_0) (a|x)$  #comment[average activation difference]
   + $g <- "mean"_(x in D_0) nabla^r_a f(x)$ #comment[robustified gradient in 0-shot setting]

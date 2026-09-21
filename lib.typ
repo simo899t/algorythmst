@@ -1,5 +1,5 @@
-// algorithmst — algorithm/pseudocode blocks for Typst (built on lovelace).
-// Import: #import "@local/algorithmst:0.1.0": *
+// algorythmst — algorithm/pseudocode blocks for Typst (built on lovelace).
+// Import: #import "@preview/algorythmst:0.1.0": *
 
 #import "@preview/lovelace:0.3.0": *
 
