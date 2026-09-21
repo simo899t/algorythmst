@@ -1,0 +1,12 @@
+[package]
+name = "algorithmst"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Simon Holm (@simo899t)"]
+license = "MIT"
+description = "Beautiful pseudocode blocks for Typst: clean rules, line numbers, small-caps titles, captions and easy comments."
+keywords = ["pseudocode", "algorithm"]
+categories = ["components"]
+disciplines = ["computer-science"]
+compiler = "0.13.0"
+exclude = ["tests/**", ".DS_Store"]
