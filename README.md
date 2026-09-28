@@ -10,10 +10,13 @@ Beautiful pseudocode blocks for Typst, styled after LaTeX's `algorithm` + `algor
 - Display math is centred automatically
 
 ## Usage
-
+Import the package with:
 ```typst
 #import "@preview/algorythmst:0.1.0": *
+```
 
+The pseudo function takes a nested list and turns it into a pseudocode block. It can optionally be given a title and caption.
+```typst
 #pseudo(
   title: [Binary Search],
   caption: [Finds `v` in the sorted array `A`.],
@@ -36,7 +39,9 @@ Beautiful pseudocode blocks for Typst, styled after LaTeX's `algorithm` + `algor
 ```
 <img width="726" height="446" alt="image" src="https://github.com/user-attachments/assets/83f852d0-f0f4-47ff-9f33-8d745ecb247f" />
 
+Titles are numbered automatically and captions are placed below the pseudocode block.
 
+The same syntax can be used for more mathematical algorithms, with display math, constraints, and comments:
 
 ```typst
 #import "@preview/algorythmst:0.1.0": *
@@ -58,7 +63,6 @@ Beautiful pseudocode blocks for Typst, styled after LaTeX's `algorithm` + `algor
 ]
 ```
 <img width="726" height="394" alt="image" src="https://github.com/user-attachments/assets/13b71a27-a7d3-48ea-9d79-2bea8b8b0a28" />
-
 
 Without `title` and `caption`, `pseudo` gives just the framed block.
 
