@@ -44,8 +44,6 @@ Titles are numbered automatically and captions are placed below the pseudocode b
 The same syntax can be used for more mathematical algorithms, with display math, constraints, and comments:
 
 ```typst
-#import "@preview/algorythmst:0.1.0": *
-
 #pseudo(
   title: "Compute DSI",
   caption: [Computes the Dataset Sparse Intervention (DSI): the neuron subset $s$ whose intervention along the activation difference $macron(a)$ best moves the model from dataset $D_0$ toward $D_k$, using at most $n$ non-zero entries.]
