@@ -40,7 +40,7 @@ Import the package with:
   + *return* $-1$ #comment[not found]
 ]
 ```
-This renders as a block headed **Algorithm 1:** Binary Search, with the title in small caps between two horizontal rules. The code lines are numbered `1:`, `2:`, … with indent guides for the nested `while` and `if` blocks, the comments sit gray and right-aligned, and the caption sits below the bottom rule:
+This renders as a block headed **Algorithm 1:** Binary Search as shown below.
 
 <img width="726" height="446" alt="Rendered Algorithm 1, Binary Search: a numbered pseudocode block with indent guides, gray right-aligned comments, and the caption below the bottom rule" src="https://github.com/user-attachments/assets/83f852d0-f0f4-47ff-9f33-8d745ecb247f" />
 
@@ -67,7 +67,7 @@ The same syntax works for more mathematical algorithms, with display math, const
   + *return* $s$
 ]
 ```
-This renders as **Algorithm 2:** Compute DSI. The unnumbered *Require:* line comes first, followed by numbered steps with inline math, a `for` loop with an indent guide, and a gray comment explaining each step on the right:
+This renders as **Algorithm 2:** Compute DSI as shown below
 
 <img width="726" height="394" alt="Rendered Algorithm 2, Compute DSI: an unnumbered Require line, numbered math-heavy steps with a for loop, gray right-aligned comments, and a multi-line caption below" src="https://github.com/user-attachments/assets/13b71a27-a7d3-48ea-9d79-2bea8b8b0a28" />
 
