@@ -41,11 +41,14 @@
   if title == none and caption == none and label == none { block(width: 100%, framed(none)) } else {
     show figure: set block(breakable: true, width: 100%)
     show figure.where(kind: "algorithm"): set align(left)
-    show figure.caption: it => align(left, it.body) 
+    // The figure's caption feeds #outline, so it holds the title when there is one;
+    // the visible caption below the block is drawn from `caption` directly.
+    set figure(gap: 0pt)
+    show figure.caption: it => if caption != none { v(0.65em) + align(left, caption) }
     let fig = figure(
       kind: "algorithm",
       supplement: [Algorithm],
-      caption: caption,
+      caption: if title != none { title } else { caption },
       framed(if title != none [#strong[Algorithm #context counter(figure.where(kind: "algorithm")).display():] #smallcaps(title)]),
     )
     block(width: 100%, if label == none { fig } else [#fig#label])
