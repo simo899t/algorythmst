@@ -7,6 +7,7 @@ Beautiful pseudocode blocks for Typst, styled after LaTeX's `algorithm` + `algor
 - Optional numbered title, rendered like LaTeX's `\caption` as **Algorithm N:** followed by the title in small caps
 - Optional caption below the block
 - Easy right-aligned comments with `#comment[...]`
+- Referenceable with `@label` via the `label:` argument
 - Display math is centred automatically
 
 ## Usage
@@ -62,13 +63,23 @@ The same syntax can be used for more mathematical algorithms, with display math,
 ```
 <img width="726" height="394" alt="image" src="https://github.com/user-attachments/assets/13b71a27-a7d3-48ea-9d79-2bea8b8b0a28" />
 
-Without `title` and `caption`, `pseudo` gives just the framed block.
+To reference an algorithm, pass a `label` and use it like any other reference:
+
+```typst
+#pseudo(title: [Binary Search], label: <alg:search>)[
+  + $l <- 1$
+]
+
+As shown in @alg:search, ...
+```
+
+Without `title`, `caption` or `label`, `pseudo` gives just the framed block.
 
 ## API
 
 | Function | Description |
 | --- | --- |
-| `pseudo(body, title: none, caption: none, ..args)` | Pseudocode block. Extra `args` go to lovelace's `pseudocode-list`. |
+| `pseudo(body, title: none, caption: none, label: none, ..args)` | Pseudocode block. Pass `label: <name>` to reference it with `@name`. Extra `args` go to lovelace's `pseudocode-list`. |
 | `comment(body)` | Gray, right-aligned comment at the end of a line. |
 
 ## License

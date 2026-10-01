@@ -1,5 +1,5 @@
 [package]
-name = "algorithmst"
+name = "algorythmst"
 version = "0.1.0"
 entrypoint = "lib.typ"
 authors = ["Simon Holm (@simo899t)"]
